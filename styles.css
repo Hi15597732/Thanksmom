@@ -1,0 +1,87 @@
+body {
+    font-family: 'Parkinson', sans-serif;
+    background: linear-gradient(135deg, #ff7eb3, #ffb3d1);
+    text-align: center;
+    padding: 50px;
+    overflow: hidden;
+    animation: backgroundAnimation 10s infinite alternate;
+}
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #ff7eb3, #ffb3d1); }
+    100% { background: linear-gradient(135deg, #ffb3d1, #ff7eb3); }
+}
+.card {
+    border: 2px solid #e81313;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    animation: cardAnimation 1s ease-in-out;
+}
+@keyframes cardAnimation {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+.image-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0;
+    display: inline-block;
+    margin-right: 20px;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+.text {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 400px;
+}
+.dot {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    animation: float 6s infinite;
+}
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+.dot1 { width: 20px; height: 20px; top: 20%; left: 10%; animation-delay: 0s; }
+.dot2 { width: 15px; height: 15px; top: 50%; left: 70%; animation-delay: 1s; }
+.dot3 { width: 25px; height: 25px; top: 80%; left: 30%; animation-delay: 2s; }
+.confetti-button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+.confetti-button:hover {
+    background-color: #ff1493;
+}
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff0;
+    opacity: 0.8;
+    animation: confetti-fall 3s forwards;
+}
+@keyframes confetti-fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
